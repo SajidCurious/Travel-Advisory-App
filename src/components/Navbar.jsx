@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import { FiSearch } from "react-icons/Fi";
 import { BsFillPersonFill } from "react-icons/Bs";
 import { GiHamburgerMenu } from "react-icons/Gi";
@@ -11,6 +11,8 @@ import {
 } from "react-icons/Fa";
 
 const Navbar = () => {
+  const [nav, setNav] = useState(false);
+  const handleNav = () => setNav(!nav);
   return (
     <div className="navbar w-full flex justify-between items-center p-6 space-x-5 sm:space-x-0">
       <div className="logo">
@@ -27,32 +29,34 @@ const Navbar = () => {
         <FiSearch />
         <BsFillPersonFill />
       </div>
-      <div className="md:hidden lg:hidden">
+      <div className="md:hidden lg:hidden" onClick={handleNav}>
         <GiHamburgerMenu />
       </div>
-      <div className="mobile-menu md:hidden lg:hidden absolute top-16 left-0 p-10 bg-[#f5f5f5] w-full">
-        <ul className="mobile-nav mb-6 space-y-4 font-medium">
-          <li>Home</li>
-          <li>Destination</li>
-          <li>Travel</li>
-          <li>Book</li>
-          <li>Views</li>
-        </ul>
-        <div className="mobile-menu-bottom">
-          <div className="menu-icons flex flex-col space-y-5">
-            <button className="bg-blue-500 text-white p-2 rounded-md">
-              Search
-            </button>
-            <button className="bg-blue-500 text-white p-2 rounded-md">
-              Account
-            </button>
-          </div>
-          <div className="social-icons flex justify-around mt-10">
-            <FaFacebookF />
-            <FaInstagram />
-            <FaTwitter />
-            <FaPinterest />
-            <FaYoutube />
+      <div className={nav ? "mobile-nav active" : "mobile-nav"}>
+        <div className="mobile-menu md:hidden lg:hidden absolute top-[-100vh] left-0 p-10 bg-[#f5f5f5] w-full">
+          <ul className="mobile-nav mb-6 space-y-4 font-medium">
+            <li>Home</li>
+            <li>Destination</li>
+            <li>Travel</li>
+            <li>Book</li>
+            <li>Views</li>
+          </ul>
+          <div className="mobile-menu-bottom">
+            <div className="menu-icons flex flex-col space-y-5">
+              <button className="bg-blue-500 text-white p-1 rounded-md text-xl">
+                Search
+              </button>
+              <button className="bg-blue-500 text-white p-1 rounded-md text-xl">
+                Account
+              </button>
+            </div>
+            <div className="social-icons flex justify-around mt-10">
+              <FaFacebookF />
+              <FaInstagram />
+              <FaTwitter />
+              <FaPinterest />
+              <FaYoutube />
+            </div>
           </div>
         </div>
       </div>
