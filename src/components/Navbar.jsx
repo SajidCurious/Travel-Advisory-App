@@ -27,6 +27,8 @@ const Navbar = () => {
           <li className="pl-6 pr-6">Travel</li>
           <li className="pl-6 pr-6">Book</li>
           <li className="pl-6 pr-6">Views</li>
+          <li className="pl-6 pr-6">Contact</li>
+          <li className="pl-6 pr-6">Manage</li>
         </ul>
         <div className="nav-icons flex space-x-4">
           <FiSearch />
