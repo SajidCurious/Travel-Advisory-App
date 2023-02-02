@@ -23,11 +23,11 @@ const Navbar = () => {
         <li>View</li>
         <li>Book</li>
       </ul>
-      <div className="icons hidden md:flex lg:flex xl:flex">
+      <div className="icons hidden md:flex lg:flex xl:flex space-x-6">
         <BsSearch size={20} />
         <BsFillPersonFill size={20} />
       </div>
-      <div className="Hamburger md:hidden lg:hidden xl:hidden">
+      <div className="Hamburger md:hidden lg:hidden xl:hidden cursor-pointer">
         <GiHamburgerMenu size={30} />
       </div>
       <div className="mobile-nav bg-gray-100 w-full md:hidden lg:hidden xl:hidden absolute top-14 left-0 px-4 py-4 my-4 flex flex-col">
@@ -41,12 +41,12 @@ const Navbar = () => {
             <button>Search</button>
             <button>Account</button>
           </div>
-          <div className="socials">
-            <BsFacebook />
-            <BsTwitter />
-            <BsYoutube />
-            <BsInstagram />
-            <BsPinterest />
+          <div className="socials flex justify-around mt-10 mb-5">
+            <BsFacebook size={28} className="icon" />
+            <BsTwitter size={28} className="icon" />
+            <BsYoutube size={28} className="icon" />
+            <BsInstagram size={28} className="icon" />
+            <BsPinterest size={28} className="icon" />
           </div>
         </ul>
       </div>
