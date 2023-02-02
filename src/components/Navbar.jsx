@@ -1,7 +1,8 @@
-import React from "react";
+import { React, useState } from "react";
 import { BsSearch } from "react-icons/Bs";
 import { BsFillPersonFill } from "react-icons/Bs";
 import { GiHamburgerMenu } from "react-icons/Gi";
+import { RxCross2 } from "react-icons/Rx";
 import {
   BsFacebook,
   BsTwitter,
@@ -11,8 +12,13 @@ import {
 } from "react-icons/Bs";
 
 const Navbar = () => {
+  const [nav, setNav] = useState(false);
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
   return (
-    <div className="navbar flex justify-between items-center h-20 px-4">
+    <div className="navbar flex justify-between items-center mt-4 px-4 absolute z-10 w-full text-white">
       <div className="logo">
         <h1>BEACHES</h1>
       </div>
@@ -23,14 +29,24 @@ const Navbar = () => {
         <li>View</li>
         <li>Book</li>
       </ul>
-      <div className="icons hidden md:flex lg:flex xl:flex space-x-6">
+      <div className="icons hidden md:flex lg:flex xl:flex space-x-6 mx-4">
         <BsSearch size={20} />
         <BsFillPersonFill size={20} />
       </div>
-      <div className="Hamburger md:hidden lg:hidden xl:hidden cursor-pointer">
-        <GiHamburgerMenu size={30} />
+      <div
+        onClick={handleNav}
+        className="Hamburger md:hidden lg:hidden xl:hidden cursor-pointer"
+      >
+        {nav ? <RxCross2 size={25} /> : <GiHamburgerMenu size={25} />}
       </div>
-      <div className="mobile-nav bg-gray-100 w-full md:hidden lg:hidden xl:hidden absolute top-14 left-0 px-4 py-4 my-4 flex flex-col">
+      <div
+        onClick={handleNav}
+        className={
+          nav
+            ? "mobile-nav text-black bg-gray-100 w-full md:hidden lg:hidden xl:hidden absolute top-14 left-0 px-4 py-4 my-4 flex flex-col"
+            : "absolute left-[-100%]"
+        }
+      >
         <ul>
           <li>Home</li>
           <li>Destination</li>
