@@ -1,3 +1,4 @@
+import Destinations from "./components/Destinations";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
@@ -6,6 +7,7 @@ const App = () => {
     <>
       <Navbar />
       <Hero />
+      <Destinations />
     </>
   );
 };

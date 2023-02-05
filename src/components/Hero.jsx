@@ -18,7 +18,7 @@ const Hero = () => {
         <h2 className="py-4">Top 1% Locations Worldwide</h2>
         <form
           action=""
-          className="bg-gray-100/90 flex justify-between items-center max-w-[700px] mx-auto w-full border p-1 rounded-md text-black"
+          className="bg-gray-100/90 flex justify-between items-center max-w-[700px] mx-auto  border p-1 rounded-md text-black w-full"
         >
           <div className="input-text">
             <input
