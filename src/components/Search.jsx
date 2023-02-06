@@ -34,7 +34,34 @@ const Search = () => {
           </div>
         </div>
       </div>
-      <div className="right">right</div>
+      <div className="right">
+        <div className="border text-center">
+          <p>GET AN ADDITIONAL 10% OFF</p>
+          <p>12 HOURS LEFT</p>
+          <p>BOOK NOW AND SAVE</p>
+        </div>
+        <form>
+          <div>
+            <label>Destination</label>
+            <select>
+              <option>Select</option>
+              <option>Grande Antgua</option>
+              <option>Key West</option>
+              <option>Maldives</option>
+              <option>Cozumel</option>
+            </select>
+          </div>
+          <div className="check-in">
+            <label>Check-In</label>
+            <input type="date" />
+          </div>
+          <div className="check-out">
+            <label>Check-Out</label>
+            <input type="date" />
+          </div>
+          <button>Rates & Availabilities</button>
+        </form>
+      </div>
     </div>
   );
 };
