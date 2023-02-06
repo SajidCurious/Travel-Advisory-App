@@ -7,7 +7,7 @@ const Search = () => {
     <div className="max-w-[1240px] mx-auto py-16 px-4 flex flex-col lg:flex-row xl:flex-row gap-8">
       <div className="left lg:w-[70vw] xl:w-[70vw]">
         <h2>LUXURY INCLUDED VACATIONS FOR TWO PEOPLE</h2>
-        <p className="py-6">
+        <p className="py-6 xl:pb-24">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum rem
           natus nisi repellendus. Maiores a tenetur libero nam in, consequuntur
           quo autem quisquam, incidunt laboriosam quia iusto. Harum, adipisci
