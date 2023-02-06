@@ -4,14 +4,18 @@ import { MdOutlineTravelExplore } from "react-icons/Md";
 
 const Search = () => {
   return (
-    <div className="max-w-[1240px] mx-auto py-16 px-4 flex flex-col gap-4">
-      <div className="left">
+    <div className="max-w-[1240px] mx-auto py-16 px-4 flex flex-col lg:flex-row xl:flex-row gap-8">
+      <div className="left lg:w-[70vw] xl:w-[70vw]">
         <h2>LUXURY INCLUDED VACATIONS FOR TWO PEOPLE</h2>
         <p className="py-6">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum rem
           natus nisi repellendus. Maiores a tenetur libero nam in, consequuntur
           quo autem quisquam, incidunt laboriosam quia iusto. Harum, adipisci
-          quas!
+          quas!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
+          rem natus nisi repellendus. Maiores a tenetur libero nam in,
+          consequuntur quo autem quisquam, incidunt laboriosam quia iusto.
+          Harum, adipisci quas! Harum, adipisci quas!Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Earum rem natus nisi repellendus.
         </p>
         <div className="support sm:space-y-4 md:space-y-4 flex gap-4 flex-col items-center justify-center  lg:flex-row xl:flex-row">
           <div className="left flex flex-col lg:flex-row xl:flex-row gap-2 items-center text-center">
@@ -34,16 +38,16 @@ const Search = () => {
           </div>
         </div>
       </div>
-      <div className="right">
+      <div className="right lg:w-[30vw] xl:w-[30vw]">
         <div className="border text-center">
-          <p>GET AN ADDITIONAL 10% OFF</p>
-          <p>12 HOURS LEFT</p>
-          <p>BOOK NOW AND SAVE</p>
+          <p className="pt-2">GET AN ADDITIONAL 10% OFF</p>
+          <p className="py-4">12 HOURS LEFT</p>
+          <p className="bg-gray-800 text-gray-200 py-2">BOOK NOW AND SAVE</p>
         </div>
-        <form>
-          <div>
+        <form className="w-full">
+          <div className="flex flex-col my-2">
             <label>Destination</label>
-            <select>
+            <select className="border rounded-md p-2">
               <option>Select</option>
               <option>Grande Antgua</option>
               <option>Key West</option>
@@ -51,15 +55,15 @@ const Search = () => {
               <option>Cozumel</option>
             </select>
           </div>
-          <div className="check-in">
+          <div className="check-in flex flex-col my-4">
             <label>Check-In</label>
-            <input type="date" />
+            <input type="date" className="border rounded-md p-2" />
           </div>
-          <div className="check-out">
+          <div className="check-out flex flex-col my-2">
             <label>Check-Out</label>
-            <input type="date" />
+            <input type="date" className="border rounded-md p-2" />
           </div>
-          <button>Rates & Availabilities</button>
+          <button className="w-full my-4">Rates & Availabilities</button>
         </form>
       </div>
     </div>
