@@ -10,9 +10,6 @@
     padding: 0;
     font-family: "Open Sans", sans-serif;
   }
-  HTML {
-    @layer scroll:smooth;
-  }
 
   li {
     @apply p-4 hover:cursor-pointer;
