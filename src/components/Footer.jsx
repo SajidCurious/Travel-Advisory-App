@@ -36,13 +36,6 @@ const Footer = () => {
             <li>View</li>
             <li>Book</li>
           </ul>
-          <ul>
-            <li>Home</li>
-            <li>Destination</li>
-            <li>Travel</li>
-            <li>View</li>
-            <li>Book</li>
-          </ul>
         </div>
       </div>
     </div>
