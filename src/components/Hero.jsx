@@ -34,7 +34,6 @@ const Hero = () => {
           </div>
         </form>
       </div>
-      <div></div>
     </div>
   );
 };
